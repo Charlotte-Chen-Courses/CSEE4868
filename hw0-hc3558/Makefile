@@ -47,12 +47,14 @@ INCDIR = -I$(OPENCV)/include -I./inc
 
 INCDEP := $(wildcard ./inc/*.h)
 
-SRCFILE := src/dwarf.cpp
+TARGET := dwarf
+
+SRCFILE := $(wildcard ./src/*.cpp)
 #
 # Rules
 #
 
-all:	dwarf 
+all:	$(TARGET) 
 
 
 #
@@ -75,18 +77,18 @@ dwarf: $(INCDEP)
 # Run
 #
 
-dwarf-run-airplane: 
-	@LD_LIBRARY_PATH=/opt/opencv/lib64:$$LD_LIBRARY_PATH ./dwarf data/airplane.bmp
+dwarf-run-airplane: $(TARGET)
+	@LD_LIBRARY_PATH=/opt/opencv/lib64:$$LD_LIBRARY_PATH ./$(TARGET) data/airplane.bmp
 
-dwarf-run-frog:
-	@LD_LIBRARY_PATH=/opt/opencv/lib64:$$LD_LIBRARY_PATH ./dwarf data/frog.bmp 
+dwarf-run-frog: $(TARGET)
+	@LD_LIBRARY_PATH=/opt/opencv/lib64:$$LD_LIBRARY_PATH ./$(TARGET) data/frog.bmp 
 
 #
 # Clean
 #
 
 clean:
-	@rm -f dwarf
+	@rm -f $(TARGET) *.o
 
 #
 # .Phony
