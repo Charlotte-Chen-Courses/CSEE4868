@@ -50,6 +50,9 @@ INCDEP := $(wildcard ./inc/*.h)
 TARGET := dwarf
 
 SRCFILE := $(wildcard ./src/*.cpp)
+
+OBJS = $(SRCFILE:.c=.o)
+
 #
 # Rules
 #
@@ -70,8 +73,8 @@ data: ./models/dwarf7.mojo
 # Target
 #
 
-dwarf: $(INCDEP)
-	$(CXX) $(CXXFLAGS) $(INCDIR) $(SRCFILE) -o $@ $^ $(LDLIBS) $(LDFLAGS) 
+dwarf: $(INCDEP) $(OBJS)
+	$(CXX) $(CXXFLAGS) $(INCDIR) $(LDLIBS) -o $@ $^ $(LDFLAGS) 
 
 #
 # Run
