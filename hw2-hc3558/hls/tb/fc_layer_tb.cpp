@@ -16,11 +16,14 @@ mojo::network *cnn;
 #define TARGET_LAYER 5
 
 void fc_layer_tb::set_configuration_param() {
-    config.num_w_cols = cnn->W[TARGET_LAYER - 1]->cols;
-
-    // @TODO Configure the remaining parameters for the invocation
+    //  Configure the remaining parameters for the invocation
     //  of the fc_layer, i.e., the parameters that have
     //  been specified in the struct fc_layer_conf_t.
+
+    config.num_w_cols = cnn->W[TARGET_LAYER - 1]->cols;
+    config.num_w_rows = cnn->W[TARGET_LAYER - 1]->rows;
+    config.in_size = cnn->layer_sets[TARGET_LAYER - 1]->node.size();
+    config.out_size = cnn->layer_sets[TARGET_LAYER]->node.size();
 
     //  hint: you can find the values of these params
     //   by using the data structure cnn. Remember that
@@ -108,24 +111,38 @@ void fc_layer_tb::load_memory() {
     //   -- hint: cnn->layer_sets[..]->bias.x is "bias"
     //   -- hint: cnn->W[..]->x is "weights"
     //   -- Substitute ".." with the proper layer index.
-    float *data = 
-    float *weights = 
-    float *bias =
+    float *data = cnn->layer_sets[TARGET_LAYER - 1]->node.x;
+    float *weights = cnn->W[TARGET_LAYER - 1]->x;
+    float *bias = cnn->layer_sets[TARGET_LAYER]->bias.x;
 
-        // @TODO Send the data to the SystemC module fc_layer
-        //  -- Send them in this order: data, weights, bias.
+    // Send the data to the SystemC module fc_layer
+
+    //  -- Send them in this order: data, weights, bias.
+    for (int i = 0; i < cnn->layer_sets[TARGET_LAYER-1]->node.size(); i++) {
+        data_o->put(data[i]);
+    }
+    
+
+    // Send weights
+    for (int i = 0; i < cnn->W[TARGET_LAYER - 1]->size(); i++) {
+        data_o->put(weights[i]);
+    }
+
+    // Send bias
+    for (int i = 0; i < cnn->layer_sets[TARGET_LAYER]->bias.size(); i++) {
+        data_o->put(bias[i]);
+    }
         REPORT_INFO("Load memory completed.");
 }
 
 void fc_layer_tb::dump_memory() {
-    // @TODO Read the data from the computed layer and
+    //   Read the data from the computed layer and
     //   store them in the data structure "cnn". To do
     //   so define a variable "output" and save the
     //   result of fc_layer in the variable "val".
-    float *output = 
+    float *output = cnn->layer_sets[TARGET_LAYER]->node.x;
     for (uint32_t i = 0; i < config.out_size; i++) {
-        float val =
-
+        float val = data_i->get();
             // @NOTE Do not modify this!
             if (output[i] != val)
                 ++tot_errors;
@@ -133,6 +150,7 @@ void fc_layer_tb::dump_memory() {
         // @NOTE Do not modify this!
         output[i] = val;
     }
+
 
     REPORT_INFO("Dump memory completed.");
 
@@ -165,7 +183,6 @@ void fc_layer_tb::validate() {
 void fc_layer_tb::end_simulation() {
     // Free-up memory
     delete cnn;
-
     // End simulation
     sc_stop();
 }
@@ -191,9 +208,11 @@ void fc_layer_tb::process_tb() {
     REPORT_INFO("Configuration sent.");
     REPORT_INFO(STR("@", begin_time.value(), " ps BEGIN - DUT"));
 
-    // @TODO Write the configuration here.
+    //  Write the configuration here.
     //  hint: use the conf_info_o signal.
+    conf_info_o.write(config);
     //  hint: use the conf_done_o signal.
+    conf_done_o.write(true);
 
 
     // Load data into DUT's memory
@@ -203,10 +222,13 @@ void fc_layer_tb::process_tb() {
     dump_memory();
 
     sc_time end_time = sc_time_stamp();
+
     REPORT_INFO(STR("@", end_time.value(), " ps END - DUT"));
 
     // Validate
     validate();
+    
+
 
     wait();
 

@@ -18,36 +18,49 @@ int sc_main(int argc, char *argv[]) {
         image_name = std::string(argv[1]);
     }
 
-    // @TODO Define the clock signal
+    // Define the clock signal
     // and the reset signal here. Use
     // the define above to define the
     // clock period of the clock signal.
+    sc_clock clk("clk", CLOCK_PERIOD, SC_NS);
+    sc_signal<bool> rst("rst");
 
     // @TODO: Define a signal perf_en to 
     // enable/disable performance monitors in the DUT
+    sc_signal<bool> perf_en("perf_en");
 
-    // @TODO Instantiate the module system_t:
+    //      Instantiate the module system_t:
     //   -- specify as parameter model_path
     //   -- specify as parameter image_name
+    sys = new system_t("sys", model_path, image_name);
 
     SC_REPORT_INFO("sc_main()", STR("Running DWARF7 for input image ", image_name));
     SC_REPORT_INFO("sc_main()", STR("Clock period is ", CLOCK_PERIOD, " ns\n"));
 
-    // @TODO Connect the clock and reset
+    // Connect the clock and reset
     // signal to the module system_t.
+    sys->clk(clk);
+    sys->rst(rst);
 
-    // @TODO Connect the performance enable
+    // Connect the performance enable
     // signal to the module system_t.
+    sys->perf_en(perf_en);
 
-    // @TODO Reset the simulation here.
+    // Reset the simulation here.
     //  -- hint: use the rst signal and
     //   the function sc_start
+    rst.write(false);
+    
+    sc_start(RESET_PERIOD, SC_NS);
+
+    rst.write(true);
    
-    // TODO: Enable perofrmance by writing true to the signal
+    // Enable perofrmance by writing true to the signal
+    perf_en.write(true);
 
     // -- Starting the simulation here
-
     sc_start();
+    
 
     return 0;
 }
