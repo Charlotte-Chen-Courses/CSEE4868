@@ -1,0 +1,1318 @@
+make[1]: Entering directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn'
+if test -e ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/system.cpp.cxxts; then \
+	rm ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/system.cpp.cxxts & \
+fi;
+  
+make[1]: Leaving directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn'
+//  Catapult Ultra Synthesis 2024.1_2/1117371 (Production Release) Fri Jun 28 23:58:31 PDT 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux hc3558@socp04-east4c:18401 3.10.0-862.11.6.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.1_2.0, HLS_PKGS v27.1_2.0, 
+//                       SIF_TOOLKITS v27.1_2.0, SIF_XILINX v27.1_2.0, 
+//                       SIF_ALTERA v27.1_2.0, CCS_LIBS v27.1_2.0, 
+//                       CDS_PPRO v2023.2_6, CDS_DesignChecker v2024.1_4, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.2_0.16, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.1/1114042
+//  
+# Connected to license server 1720@bioeelincad.ee.columbia.edu (LIC-13)
+# Catapult product license successfully checked out, elapsed time 00:02 (LIC-14)
+dofile ./rtl_sim.tcl
+# > set IM $::env(IMM)
+# cat
+# > set MODE_SIM $::env(MD)
+# RUN_ACCELERATED_SIM
+# > set arch $::env(arch)
+# SMALL
+# > set dma_width $::env(DMA_WIDTH)
+# 32
+# > project load conv_layer_$arch\_sysc_catapult_dma$dma_width.ccs
+# Creating project directory '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/'. (PRJ-1)
+# Moving session transcript to file "/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/catapult.log"
+# Reading solution library '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/td_ccore_solutions/Connections__conn_sync__chan__sync_in_9b724c3d1b64df9e592427cb55f633ec6224_0/.sif/solIndex_2_37117e13-d050-485a-bb0f-61862a94d8dd.xml' ... (LIB-129)
+# Reading solution library '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/td_ccore_solutions/Connections__conn_sync__chan__sync_in_9b724c3d1b64df9e592427cb55f633ec6224_0/.sif/solIndex_2_37117e13-d050-485a-bb0f-61862a94d8dd.xml' ... (LIB-129)
+# Reading solution library '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/td_ccore_solutions/Connections__conn_sync__chan__sync_out_dfaca01bc3071ce9f0d173f9199dcdeb622e_0/.sif/solIndex_2_90238a74-2058-4b2f-8cea-56ae0797f00d.xml' ... (LIB-129)
+# Reading solution library '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/td_ccore_solutions/Connections__conn_sync__chan__sync_out_dfaca01bc3071ce9f0d173f9199dcdeb622e_0/.sif/solIndex_2_90238a74-2058-4b2f-8cea-56ae0797f00d.xml' ... (LIB-129)
+# > flow package option set /SCVerify/INVOKE_ARGS $IM
+# cat
+# > flow run /SCVerify/launch_make ./scverify/Verify_concat_sim_conv_layer_sysc_catapult_v_msim.mk {} SIMTOOL=msim sim CXX_OPTS=-D$MODE_SIM
+# Warning: One or more options were changed. Full or partial rebuild may be required.
+# Making './scverify/Verify_concat_sim_conv_layer_sysc_catapult_v_msim.mk {} SIMTOOL=msim sim CXX_OPTS=-DRUN_ACCELERATED_SIM'
+# Make utility invoked from '/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1'
+#     /opt/Catapult_2024.1_2/Mgc_home/bin/make -f ./scverify/Verify_concat_sim_conv_layer_sysc_catapult_v_msim.mk SIMTOOL=msim CXX_OPTS=-DRUN_ACCELERATED_SIM build < "/dev/null" (BASIC-15)
+# make[2]: Entering directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1'
+# ============================================
+# Creating simulation directory 'scverify/concat_sim_conv_layer_sysc_catapult_v_msim'
+# mkdir -p scverify/concat_sim_conv_layer_sysc_catapult_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/cad/mentor/modeltech/bin/../modelsim.ini'
+# cat "/opt/cad/mentor/modeltech/bin/../modelsim.ini" >scverify/concat_sim_conv_layer_sysc_catapult_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work'
+# /opt/cad/mentor/modeltech/bin/vlib scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work'
+# /opt/cad/mentor/modeltech/bin/vmap work \$SCVLIBS/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work
+# Model Technology ModelSim SE-64 vmap 2019.2 Lib Mapping Utility 2019.04 Apr 16 2019
+# vmap work $SCVLIBS/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work 
+# Modifying scverify/concat_sim_conv_layer_sysc_catapult_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/Catapult_2024.1_2/Mgc_home/bin/tclsh8.5 /opt/Catapult_2024.1_2/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/ccs_wave_signals.dat scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/.dut_inst_info.tcl ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/ccs_wave_signals.dat scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/.dut_inst_info.tcl ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: concat_sim_conv_layer_sysc_catapult.v
+# /opt/cad/mentor/modeltech/bin/vlog -work work     concat_sim_conv_layer_sysc_catapult.v
+# Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
+# Start time: 17:19:11 on Nov 20,2024
+# vlog -work work concat_sim_conv_layer_sysc_catapult.v 
+# -- Compiling module esp_acc_conv_layer_dma32ccs_in_wait_v1
+# -- Compiling module esp_acc_conv_layer_dma32ccs_out_wait_v1
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out_core
+# -- Compiling module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out
+# ** Warning: concat_sim_conv_layer_sysc_catapult.v(282): (vlog-2275) 'esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1' already exists and will be overwritten.
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1
+# ** Warning: concat_sim_conv_layer_sysc_catapult.v(315): (vlog-2275) 'esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1' already exists and will be overwritten.
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1
+# -- Compiling module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in_core
+# -- Compiling module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in
+# -- Compiling module BLOCK_1R1W_RBW
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sJFQKKdata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sBessydata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sBGfUJdata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sVGgQTdata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sNfewidata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sEHatpdata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sCckVHdata_rsc_bctl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_121_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_120_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_store_output_fsm
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_staller
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi_dma_write_chnl_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi_dma_write_ctrl_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi_sync2b3b_sync_in_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_119_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_118_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_117_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_116_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_115_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_114_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_113_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_compute_kernel_fsm
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_staller
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi_sync2b3b_sync_out_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi_sync12b_sync_in_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_112_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_111_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_110_11_32_2000_1_2000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_109_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_108_12_32_4000_1_4000_32_1_gen
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_load_input_fsm
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_staller
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi_sync12b_sync_out_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi_dma_read_chnl_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi_dma_read_ctrl_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_config_fsm
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_staller
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_dp
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi_conf_info_Pop_mio_wait_ctrl
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input
+# -- Compiling module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config
+# -- Compiling module conv_layer_sysc_catapult
+# 
+# Top level modules:
+# 	conv_layer_sysc_catapult
+# End time: 17:19:11 on Nov 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# ============================================
+# Compiling Verilog file: scverify/ccs_wrapper_conv_layer_sysc_catapult.v
+# /opt/cad/mentor/modeltech/bin/vlog -work work     scverify/ccs_wrapper_conv_layer_sysc_catapult.v
+# Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 16 2019
+# Start time: 17:19:11 on Nov 20,2024
+# vlog -work work scverify/ccs_wrapper_conv_layer_sysc_catapult.v 
+# -- Compiling module ccs_wrapper
+# 
+# Top level modules:
+# 	ccs_wrapper
+# End time: 17:19:11 on Nov 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../../tb/system.cpp
+# /opt/cad/mentor/modeltech/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DBANKED_MULTI_PROCESS -DSC_INCLUDE_DYNAMIC_PROCESSES -DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL -DSEGMENT_BURST_SIZE=16 -DHLS_CATAPULT -DHLS_READY -DSMALL -DSC_INCLUDE_DYNAMIC_PROCESSES -DCCS_SYSC -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=conv_layer_sysc_catapult -DDMA_WIDTH=32 -DDEADLOCK_DETECTION -std=gnu++11 -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_h
+# ome/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/src -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/siflibs -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC -DRUN_ACCELERATED_SIM -c ../../../tb/system.cpp
+# Start time: 17:19:11 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# 
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/system.cpp:9:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:23:0: warning: "CONNECTIONS_ASSERT_MSG" redefined
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG) NVHLS_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/system.cpp:9:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:51:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG)           \
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/system.cpp:9:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:24:0: warning: "CONNECTIONS_SIM_ONLY_ASSERT_MSG" redefined
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) CMOD_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/system.cpp:9:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:76:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) \
+#  ^
+# In file included from ../../../src/conv_layer_specs.hpp:10:0,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/system.cpp:9:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:34:0: warning: "CONNECTIONS_NAMING_ORIGINAL" redefined
+#  #define CONNECTIONS_NAMING_ORIGINAL
+#  ^
+# <command-line>:0:0: note: this is the location of the previous definition
+# ../../../tb/system.cpp: In member function 'void system_t::validate()':
+# ../../../tb/system.cpp:489:9: warning: unused variable 'tot_errors' [-Wunused-variable]
+#      int tot_errors = 0;
+#          ^
+# In file included from ../../../tb/system.hpp:19:0,
+#                  from ../../../tb/system.cpp:9:
+# ../../../../inc/core/systems/esp_dma_controller.hpp: In instantiation of 'esp_dma_controller<_DMA_WIDTH_, _MEM_SIZE_>::esp_dma_controller(sc_core::sc_module_name, mti_ac::ac_int<32, true>*) [with int _DMA_WIDTH_ = 32; int _MEM_SIZE_ = 4194304]':
+# ../../../tb/system.hpp:64:88:   required from here
+# ../../../../inc/core/systems/esp_dma_controller.hpp:41:50: warning: 'esp_dma_controller<32, 4194304>::dma_read_chnl' will be initialized after [-Wreorder]
+#          Connections::Out<ac_int<DMA_WIDTH,true>> dma_read_chnl;
+#                                                   ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:36:21: warning:   'sc_core::sc_in<bool> esp_dma_controller<32, 4194304>::acc_done' [-Wreorder]
+#          sc_in<bool> acc_done;
+#                      ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:48:9: warning:   when initialized here [-Wreorder]
+#          esp_dma_controller(sc_module_name name, ac_int<DMA_WIDTH,true> *ptr)
+#          ^
+# 
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./scverify/sysc_sim.h, 50)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./scverify/sysc_sim.h, 51)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./scverify/sysc_sim.h, 52)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./scverify/sysc_sim.h, 53)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./scverify/sysc_sim.h, 54)
+# ** Warning: (sccom-6102) The object "sc_mod_alloc" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 641)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./../../../src/conv_layer.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 34)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 35)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 36)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 37)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (../../../tb/driver.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 27)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 41)
+# End time: 17:19:22 on Nov 20,2024, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 24
+# ============================================
+# Compiling C++ file: ../../../tb/sc_main.cpp
+# /opt/cad/mentor/modeltech/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DBANKED_MULTI_PROCESS -DSC_INCLUDE_DYNAMIC_PROCESSES -DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL -DSEGMENT_BURST_SIZE=16 -DHLS_CATAPULT -DHLS_READY -DSMALL -DSC_INCLUDE_DYNAMIC_PROCESSES -DCCS_SYSC -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=conv_layer_sysc_catapult -DDMA_WIDTH=32 -DDEADLOCK_DETECTION -std=gnu++11 -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_h
+# ome/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/src -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/siflibs -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC -DRUN_ACCELERATED_SIM -c ../../../tb/sc_main.cpp
+# Start time: 17:19:22 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# 
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/sc_main.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:23:0: warning: "CONNECTIONS_ASSERT_MSG" redefined
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG) NVHLS_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/sc_main.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:51:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG)           \
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/sc_main.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:24:0: warning: "CONNECTIONS_SIM_ONLY_ASSERT_MSG" redefined
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) CMOD_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/sc_main.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:76:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) \
+#  ^
+# In file included from ../../../src/conv_layer_specs.hpp:10:0,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/system.hpp:9,
+#                  from ../../../tb/sc_main.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:34:0: warning: "CONNECTIONS_NAMING_ORIGINAL" redefined
+#  #define CONNECTIONS_NAMING_ORIGINAL
+#  ^
+# <command-line>:0:0: note: this is the location of the previous definition
+# In file included from ../../../tb/system.hpp:19:0,
+#                  from ../../../tb/sc_main.cpp:3:
+# ../../../../inc/core/systems/esp_dma_controller.hpp: In instantiation of 'esp_dma_controller<_DMA_WIDTH_, _MEM_SIZE_>::esp_dma_controller(sc_core::sc_module_name, mti_ac::ac_int<32, true>*) [with int _DMA_WIDTH_ = 32; int _MEM_SIZE_ = 4194304]':
+# ../../../tb/system.hpp:64:88:   required from here
+# ../../../../inc/core/systems/esp_dma_controller.hpp:41:50: warning: 'esp_dma_controller<32, 4194304>::dma_read_chnl' will be initialized after [-Wreorder]
+#          Connections::Out<ac_int<DMA_WIDTH,true>> dma_read_chnl;
+#                                                   ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:36:21: warning:   'sc_core::sc_in<bool> esp_dma_controller<32, 4194304>::acc_done' [-Wreorder]
+#          sc_in<bool> acc_done;
+#                      ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:48:9: warning:   when initialized here [-Wreorder]
+#          esp_dma_controller(sc_module_name name, ac_int<DMA_WIDTH,true> *ptr)
+#          ^
+# 
+# Exported modules:
+# 	sc_main
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./scverify/sysc_sim.h, 50)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./scverify/sysc_sim.h, 51)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./scverify/sysc_sim.h, 52)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./scverify/sysc_sim.h, 53)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./scverify/sysc_sim.h, 54)
+# ** Warning: (sccom-6102) The object "sc_mod_alloc" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 641)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./../../../src/conv_layer.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 34)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 35)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 36)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 37)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (../../../tb/driver.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 27)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 41)
+# End time: 17:19:34 on Nov 20,2024, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 24
+# ============================================
+# Compiling C++ file: ../../../tb/driver.cpp
+# /opt/cad/mentor/modeltech/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DBANKED_MULTI_PROCESS -DSC_INCLUDE_DYNAMIC_PROCESSES -DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL -DSEGMENT_BURST_SIZE=16 -DHLS_CATAPULT -DHLS_READY -DSMALL -DSC_INCLUDE_DYNAMIC_PROCESSES -DCCS_SYSC -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=conv_layer_sysc_catapult -DDMA_WIDTH=32 -DDEADLOCK_DETECTION -std=gnu++11 -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_h
+# ome/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/src -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/siflibs -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC -DRUN_ACCELERATED_SIM -c ../../../tb/driver.cpp
+# Start time: 17:19:34 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# 
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/driver.cpp:4:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:23:0: warning: "CONNECTIONS_ASSERT_MSG" redefined
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG) NVHLS_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/driver.cpp:4:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:51:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG)           \
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/driver.cpp:4:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:24:0: warning: "CONNECTIONS_SIM_ONLY_ASSERT_MSG" redefined
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) CMOD_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/driver.cpp:4:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:76:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) \
+#  ^
+# In file included from ../../../src/conv_layer_specs.hpp:10:0,
+#                  from ../../../tb/driver.hpp:9,
+#                  from ../../../tb/driver.cpp:4:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:34:0: warning: "CONNECTIONS_NAMING_ORIGINAL" redefined
+#  #define CONNECTIONS_NAMING_ORIGINAL
+#  ^
+# <command-line>:0:0: note: this is the location of the previous definition
+# ../../../tb/driver.cpp: In member function 'void driver_t::driver_thread()':
+# ../../../tb/driver.cpp:34:18: warning: unused variable 'rdata' [-Wunused-variable]
+#          uint32_t rdata;
+#                   ^
+# In file included from ../../../tb/system.hpp:19:0,
+#                  from ../../../tb/driver.cpp:5:
+# ../../../../inc/core/systems/esp_dma_controller.hpp: In instantiation of 'esp_dma_controller<_DMA_WIDTH_, _MEM_SIZE_>::esp_dma_controller(sc_core::sc_module_name, mti_ac::ac_int<32, true>*) [with int _DMA_WIDTH_ = 32; int _MEM_SIZE_ = 4194304]':
+# ../../../tb/system.hpp:64:88:   required from here
+# ../../../../inc/core/systems/esp_dma_controller.hpp:41:50: warning: 'esp_dma_controller<32, 4194304>::dma_read_chnl' will be initialized after [-Wreorder]
+#          Connections::Out<ac_int<DMA_WIDTH,true>> dma_read_chnl;
+#                                                   ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:36:21: warning:   'sc_core::sc_in<bool> esp_dma_controller<32, 4194304>::acc_done' [-Wreorder]
+#          sc_in<bool> acc_done;
+#                      ^
+# ../../../../inc/core/systems/esp_dma_controller.hpp:48:9: warning:   when initialized here [-Wreorder]
+#          esp_dma_controller(sc_module_name name, ac_int<DMA_WIDTH,true> *ptr)
+#          ^
+# 
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./scverify/sysc_sim.h, 50)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./scverify/sysc_sim.h, 51)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./scverify/sysc_sim.h, 52)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./scverify/sysc_sim.h, 53)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./scverify/sysc_sim.h, 54)
+# ** Warning: (sccom-6102) The object "sc_mod_alloc" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 641)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./../../../src/conv_layer.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 34)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 35)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 36)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 37)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (../../../tb/driver.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 27)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 30)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (../../../../inc/core/systems/esp_dma_controller.hpp, 41)
+# End time: 17:19:44 on Nov 20,2024, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 24
+# ============================================
+# Compiling C++ file: ../../../src/conv_layer.cpp
+# /opt/cad/mentor/modeltech/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DBANKED_MULTI_PROCESS -DSC_INCLUDE_DYNAMIC_PROCESSES -DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL -DSEGMENT_BURST_SIZE=16 -DHLS_CATAPULT -DHLS_READY -DSMALL -DSC_INCLUDE_DYNAMIC_PROCESSES -DCCS_SYSC -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=conv_layer_sysc_catapult -DDMA_WIDTH=32 -DDEADLOCK_DETECTION -std=gnu++11 -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_h
+# ome/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/src -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/siflibs -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC -DRUN_ACCELERATED_SIM -c ../../../src/conv_layer.cpp
+# Start time: 17:19:44 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# 
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../src/conv_layer.hpp:4,
+#                  from ../../../src/conv_layer.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:23:0: warning: "CONNECTIONS_ASSERT_MSG" redefined
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG) NVHLS_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../src/conv_layer.hpp:4,
+#                  from ../../../src/conv_layer.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:51:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG)           \
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ../../../src/conv_layer_specs.hpp:10,
+#                  from ../../../src/conv_layer.hpp:4,
+#                  from ../../../src/conv_layer.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:24:0: warning: "CONNECTIONS_SIM_ONLY_ASSERT_MSG" redefined
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) CMOD_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ../../../src/conv_layer_specs.hpp:9,
+#                  from ../../../src/conv_layer.hpp:4,
+#                  from ../../../src/conv_layer.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:76:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) \
+#  ^
+# In file included from ../../../src/conv_layer_specs.hpp:10:0,
+#                  from ../../../src/conv_layer.hpp:4,
+#                  from ../../../src/conv_layer.cpp:3:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:34:0: warning: "CONNECTIONS_NAMING_ORIGINAL" redefined
+#  #define CONNECTIONS_NAMING_ORIGINAL
+#  ^
+# <command-line>:0:0: note: this is the location of the previous definition
+# In file included from ../../../src/conv_layer.hpp:4:0,
+#                  from ../../../src/conv_layer.cpp:3:
+# ../../../src/conv_layer_utils.hpp: In member function 'void conv_layer_sysc_catapult::load_d(bool, uint32_t, uint32_t)':
+# ../../../src/conv_layer_specs.hpp:18:20: warning: left shift count >= width of type [-Wshift-count-overflow]
+#  #define DATA_WIDTH 32
+#                     ^
+# ../../../src/conv_layer_specs.hpp:51:19: note: in expansion of macro 'DATA_WIDTH'
+#  #define FPDATA_WL DATA_WIDTH
+#                    ^
+# ../../../src/conv_layer_utils.hpp:26:55: note: in expansion of macro 'FPDATA_WL'
+#          const uint32_t data_mask = (((uint32_t) 1) << FPDATA_WL) - 1;
+#                                                        ^
+# In file included from ../../../src/conv_layer.cpp:7:0:
+# ../../../src/conv_layer_utils.hpp:12:14: warning: unused variable 'bank_index' [-Wunused-variable]
+#      uint32_t bank_index = 0;
+#               ^
+# In file included from ../../../src/conv_layer.hpp:4:0,
+#                  from ../../../src/conv_layer.cpp:3:
+# ../../../src/conv_layer_utils.hpp: In member function 'void conv_layer_sysc_catapult::load_b(uint32_t, uint32_t)':
+# ../../../src/conv_layer_specs.hpp:18:20: warning: left shift count >= width of type [-Wshift-count-overflow]
+#  #define DATA_WIDTH 32
+#                     ^
+# ../../../src/conv_layer_specs.hpp:51:19: note: in expansion of macro 'DATA_WIDTH'
+#  #define FPDATA_WL DATA_WIDTH
+#                    ^
+# ../../../src/conv_layer_utils.hpp:66:55: note: in expansion of macro 'FPDATA_WL'
+#          const uint32_t data_mask = (((uint32_t) 1) << FPDATA_WL) - 1;
+#                                                        ^
+# ../../../src/conv_layer_utils.hpp: In member function 'void conv_layer_sysc_catapult::load_w(bool, uint32_t, uint32_t, uint32_t)':
+# ../../../src/conv_layer_specs.hpp:18:20: warning: left shift count >= width of type [-Wshift-count-overflow]
+#  #define DATA_WIDTH 32
+#                     ^
+# ../../../src/conv_layer_specs.hpp:51:19: note: in expansion of macro 'DATA_WIDTH'
+#  #define FPDATA_WL DATA_WIDTH
+#                    ^
+# ../../../src/conv_layer_utils.hpp:102:55: note: in expansion of macro 'FPDATA_WL'
+#          const uint32_t data_mask = (((uint32_t) 1) << FPDATA_WL) - 1;
+#                                                        ^
+# In file included from ../../../src/conv_layer.cpp:7:0:
+# ../../../src/conv_layer_utils.hpp:87:14: warning: unused variable 'bank_index' [-Wunused-variable]
+#      uint32_t bank_index = 0;
+#               ^
+# In file included from ../../../src/conv_layer.cpp:11:0:
+# ../../../src/conv_layer_functions.hpp: In member function 'void conv_layer_sysc_catapult::convolution_compute(uint32_t, uint32_t, uint32_t, uint32_t, int, int, bool, bool, uint32_t, uint32_t, bool, bool)':
+# ../../../src/conv_layer_functions.hpp:25:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#      const bool last = (src_chan == src_chans - 1);
+#                                  ^
+# ../../../src/conv_layer_functions.hpp:58:23: warning: unused variable 'index_out_p0' [-Wunused-variable]
+#              const int index_out_p0 = (j - 1) * cols + i - 1;
+#                        ^
+# ../../../src/conv_layer_functions.hpp:59:23: warning: unused variable 'index_out_p1' [-Wunused-variable]
+#              const int index_out_p1 = j * cols + i - 1;
+#                        ^
+# ../../../src/conv_layer_functions.hpp:60:23: warning: unused variable 'index_out_p2' [-Wunused-variable]
+#              const int index_out_p2 = (j - 1) * cols + i;
+#                        ^
+# ../../../src/conv_layer_functions.hpp:64:17: warning: variable 'index_out_pool' set but not used [-Wunused-but-set-variable]
+#              int index_out_pool;
+#                  ^
+# ../../../src/conv_layer_functions.hpp:74:17: warning: unused variable 'index_k' [-Wunused-variable]
+#              int index_k = (j*i)/3;
+#                  ^
+# ../../../src/conv_layer_functions.hpp:75:17: warning: unused variable 'index_i' [-Wunused-variable]
+#              int index_i;
+#                  ^
+# ../../../src/conv_layer_functions.hpp:18:15: warning: unused variable 'chan_stride' [-Wunused-variable]
+#      const int chan_stride = num_cols * num_rows;
+#                ^
+# ../../../src/conv_layer_functions.hpp:23:15: warning: unused variable 'output_pool_ptr' [-Wunused-variable]
+#      const int output_pool_ptr = 0;
+#                ^
+# ../../../src/conv_layer_functions.hpp: In member function 'void conv_layer_sysc_catapult::poolpad_compute(uint32_t, uint32_t, uint32_t, uint32_t, int, int, bool, bool, uint32_t, uint32_t, bool, bool)':
+# ../../../src/conv_layer_functions.hpp:182:23: warning: unused variable 'index_out' [-Wunused-variable]
+#              const int index_out = index_out_p3;
+#                        ^
+# ../../../src/conv_layer_functions.hpp:245:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int i = 0; i < pool_size; i ++)
+#                            ^
+# ../../../src/conv_layer_functions.hpp:253:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int i = 0; i < pool_size; i ++)
+#                            ^
+# ../../../src/conv_layer_functions.hpp:262:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int i = 0; i < pool_size; i ++)
+#                            ^
+# ../../../src/conv_layer_functions.hpp:271:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int i = 0; i < pool_size; i ++)
+#                            ^
+# ../../../src/conv_layer_functions.hpp:164:15: warning: unused variable 'chan_stride' [-Wunused-variable]
+#      const int chan_stride = num_cols * num_rows;
+#                ^
+# ../../../src/conv_layer_functions.hpp:166:15: warning: unused variable 'input_ptr' [-Wunused-variable]
+#      const int input_ptr = 0;
+#                ^
+# ../../../src/conv_layer_functions.hpp:167:15: warning: unused variable 'input_w_ptr' [-Wunused-variable]
+#      const int input_w_ptr = 0;
+#                ^
+# ../../../src/conv_layer_functions.hpp:168:15: warning: unused variable 'output_bias_ptr' [-Wunused-variable]
+#      const int output_bias_ptr = dst_chan;
+#                ^
+# ../../../src/conv_layer.cpp: In member function 'void conv_layer_sysc_catapult::load_input()':
+# ../../../src/conv_layer.cpp:83:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#              for (int dst_chan = 0; dst_chan < dst_chans; dst_chan++)
+#                                              ^
+# ../../../src/conv_layer.cpp:85:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#                  for (int src_chan = 0; src_chan < src_chans; src_chan++)
+#                                                  ^
+# ../../../src/conv_layer.cpp: In member function 'void conv_layer_sysc_catapult::compute_kernel()':
+# ../../../src/conv_layer.cpp:145:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int dst_chan = 0; dst_chan < dst_chans; dst_chan++)
+#                                          ^
+# ../../../src/conv_layer.cpp:147:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#              for (int src_chan = 0; src_chan < src_chans; src_chan++)
+#                                              ^
+# ../../../src/conv_layer.cpp:159:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#                  if (src_chan ==src_chans -1)
+#                               ^
+# ../../../src/conv_layer.cpp: In member function 'void conv_layer_sysc_catapult::store_output()':
+# ../../../src/conv_layer.cpp:211:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#          for (int dst_chan = 0; dst_chan < dst_chans; dst_chan++)
+#                                          ^
+# ../../../src/conv_layer.cpp:205:18: warning: unused variable 'out_size' [-Wunused-variable]
+#          uint32_t out_size        = cmd.out_size_sig;
+#                   ^
+# 
+# ** Warning: (sccom-6102) The object "sc_mod_alloc" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 641)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (../../../src/conv_layer.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (../../../src/conv_layer.hpp, 34)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (../../../src/conv_layer.hpp, 35)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (../../../src/conv_layer.hpp, 36)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (../../../src/conv_layer.hpp, 37)
+# End time: 17:19:51 on Nov 20,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 10
+# ============================================
+# Compiling C++ file: scverify/sysc_sim.cpp
+# /opt/cad/mentor/modeltech/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DBANKED_MULTI_PROCESS -DSC_INCLUDE_DYNAMIC_PROCESSES -DCONNECTIONS_ACCURATE_SIM -DCONNECTIONS_NAMING_ORIGINAL -DSEGMENT_BURST_SIZE=16 -DHLS_CATAPULT -DHLS_READY -DSMALL -DSC_INCLUDE_DYNAMIC_PROCESSES -DCCS_SYSC -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=conv_layer_sysc_catapult -DDMA_WIDTH=32 -DDEADLOCK_DETECTION -std=gnu++11 -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I. -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/include -I/opt/matchlib_examples_kit_fall_2024/matchlib_toolkit/examples/boost_home -I/opt/Catapult_2024.1_2/Mgc_h
+# ome/shared/pkgs/matchlib/cmod/include -I../.. -I../../../src -I../../../../inc -I../../../../inc/core/systems -I../../../../pv/mojo -I./scverify -I. -I../.. -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/shared/include -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/src -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/siflibs -I/opt/Catapult_2024.1_2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC -DRUN_ACCELERATED_SIM -c scverify/sysc_sim.cpp
+# Start time: 17:19:51 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# 
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ./../../../src/conv_layer_specs.hpp:10,
+#                  from ./../../../src/conv_layer.hpp:4,
+#                  from scverify/sysc_sim.h:32,
+#                  from scverify/sysc_sim.cpp:18:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:23:0: warning: "CONNECTIONS_ASSERT_MSG" redefined
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG) NVHLS_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ./../../../src/conv_layer_specs.hpp:9,
+#                  from ./../../../src/conv_layer.hpp:4,
+#                  from scverify/sysc_sim.h:32,
+#                  from scverify/sysc_sim.cpp:18:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:51:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_ASSERT_MSG(X,MSG)           \
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:21:0,
+#                  from ./../../../src/conv_layer_specs.hpp:10,
+#                  from ./../../../src/conv_layer.hpp:4,
+#                  from scverify/sysc_sim.h:32,
+#                  from scverify/sysc_sim.cpp:18:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections_utils.h:24:0: warning: "CONNECTIONS_SIM_ONLY_ASSERT_MSG" redefined
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) CMOD_ASSERT_MSG(X,MSG)
+#  ^
+# In file included from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/marshaller.h:44:0,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h:88,
+#                  from /opt/Catapult_2024.1_2/Mgc_home/shared/include/mc_connections.h:60,
+#                  from ./../../../src/conv_layer_specs.hpp:9,
+#                  from ./../../../src/conv_layer.hpp:4,
+#                  from scverify/sysc_sim.h:32,
+#                  from scverify/sysc_sim.cpp:18:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections_utils.h:76:0: note: this is the location of the previous definition
+#  #define CONNECTIONS_SIM_ONLY_ASSERT_MSG(X,MSG) \
+#  ^
+# In file included from ./../../../src/conv_layer_specs.hpp:10:0,
+#                  from ./../../../src/conv_layer.hpp:4,
+#                  from scverify/sysc_sim.h:32,
+#                  from scverify/sysc_sim.cpp:18:
+# /opt/Catapult_2024.1_2/Mgc_home/shared/pkgs/matchlib/cmod/include/nvhls_connections.h:34:0: warning: "CONNECTIONS_NAMING_ORIGINAL" redefined
+#  #define CONNECTIONS_NAMING_ORIGINAL
+#  ^
+# <command-line>:0:0: note: this is the location of the previous definition
+# 
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (scverify/sysc_sim.h, 50)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (scverify/sysc_sim.h, 51)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (scverify/sysc_sim.h, 52)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (scverify/sysc_sim.h, 53)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (scverify/sysc_sim.h, 54)
+# ** Warning: (sccom-6102) The object "sc_mod_alloc" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 641)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "sim_out" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4648)
+# ** Warning: (sccom-6102) The object "sim_in" is not debuggable. (/opt/Catapult_2024.1_2/Mgc_home/shared/include/connections/connections.h, 4649)
+# ** Warning: (sccom-6102) The object "conf_info" is not debuggable. (./../../../src/conv_layer.hpp, 33)
+# ** Warning: (sccom-6102) The object "dma_read_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 34)
+# ** Warning: (sccom-6102) The object "dma_write_chnl" is not debuggable. (./../../../src/conv_layer.hpp, 35)
+# ** Warning: (sccom-6102) The object "dma_read_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 36)
+# ** Warning: (sccom-6102) The object "dma_write_ctrl" is not debuggable. (./../../../src/conv_layer.hpp, 37)
+# End time: 17:19:58 on Nov 20,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 15
+# ============================================
+# Linking executable
+# /opt/cad/mentor/modeltech/bin/sccom -link   
+# sccom -link 
+# Start time: 17:19:58 on Nov 20,2024
+# 
+# Model Technology ModelSim SE-64 sccom 2019.2 compiler 2019.04 Apr 16 2019
+# End time: 17:19:59 on Nov 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: sc_main
+# cd ../..; /opt/cad/mentor/modeltech/bin/vopt +acc=anpr +cover=sbceft -coverdeglitch 5ps -sc_arg cat   -L "./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work"   sc_main  -o sc_main_opt
+# Model Technology ModelSim SE-64 vopt 2019.2 Compiler 2019.04 Apr 16 2019
+# Start time: 17:19:59 on Nov 20,2024
+# vopt "+acc=anpr" "+cover=sbceft" -coverdeglitch 5ps -sc_arg "cat" -L ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work sc_main -o sc_main_opt 
+# 
+# Top level modules:
+# 	sc_main
+# 
+# Analyzing design...
+# -- Loading shared library /home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work.sc_main
+# -- Loading module ccs_wrapper
+# -- Loading module conv_layer_sysc_catapult
+# -- Loading module BLOCK_1R1W_RBW
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32ccs_in_wait_v1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi_conf_info_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32ccs_out_wait_v1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_staller
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_config_fsm
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_108_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_109_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_110_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_111_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_112_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi_dma_read_ctrl_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi_dma_read_chnl_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi
+# -- Loading module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out
+# -- Loading module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out_core
+# -- Loading module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1
+# -- Loading module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi_sync12b_sync_out_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_staller
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_load_input_fsm
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_113_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_114_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_115_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_116_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_117_11_32_2000_1_2000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_118_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_119_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi
+# -- Loading module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in
+# -- Loading module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in_core
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi_sync12b_sync_in_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi_sync2b3b_sync_out_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_staller
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_compute_kernel_fsm
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_120_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_121_12_32_4000_1_4000_32_1_gen
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi_sync2b3b_sync_in_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi_dma_write_ctrl_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi_dma_write_chnl_Push_mio_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_staller
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_store_output_fsm
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sCckVHdata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sEHatpdata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sNfewidata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sVGgQTdata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sBGfUJdata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sBessydata_rsc_bctl
+# -- Loading module esp_acc_conv_layer_dma32conv_layer_sJFQKKdata_rsc_bctl
+# Optimizing 147 design-units (inlining 0/170 module instances, 0/16 systemc instances):
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sVGgQTdata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sBGfUJdata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_in_wait_v1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_out_wait_v1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__1)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_in_wait_v1(fast__1)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__2)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_in_wait_v1(fast__2)
+# -- Optimizing module esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__3)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_staller(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_108_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_109_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_110_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_111_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_112_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi_sync12b_sync_out_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_staller(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_113_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_114_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_115_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_116_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_117_11_32_2000_1_2000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi_sync12b_sync_in_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi_sync2b3b_sync_out_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_120_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_121_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi_sync2b3b_sync_in_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1(fast__1)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi_conf_info_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi_dma_read_ctrl_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi_dma_read_chnl_Pop_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi_dma_write_ctrl_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi_dma_write_chnl_Push_mio_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1(fast__1)
+# -- Optimizing module ccs_wrapper(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_staller(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_118_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_119_12_32_4000_1_4000_32_1_gen(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_staller(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sEHatpdata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sNfewidata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_compute_kernel_fsm(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_compute_kernel_fsm(fast)".
+# -- Optimizing module conv_layer_sysc_catapult(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_load_input_fsm(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_load_input_fsm(fast)".
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_store_output_fsm(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_store_output_fsm(fast)".
+# -- Optimizing module BLOCK_1R1W_RBW(fast)
+# -- Optimizing module BLOCK_1R1W_RBW(fast__1)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sCckVHdata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sJFQKKdata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sBessydata_rsc_bctl(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out_core(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in_core(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config(fast)
+# -- Optimizing module esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_config_fsm(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_config_fsm(fast)".
+# Optimized design name is sc_main_opt
+# End time: 17:20:00 on Nov 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# make[2]: Leaving directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1'
+#     /opt/Catapult_2024.1_2/Mgc_home/bin/make -f ./scverify/Verify_concat_sim_conv_layer_sysc_catapult_v_msim.mk SIMTOOL=msim sim CXX_OPTS=-DRUN_ACCELERATED_SIM (BASIC-14)
+# make[2]: Entering directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1'
+# ============================================
+# Simulating design entity: sc_main
+# cd ../..; /opt/cad/mentor/modeltech/bin/vsim -t ps -coverage -onfinish stop -wlf ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/vsim.wlf -l "./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/sim.log"   -L "./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work"   sc_main_opt   -sc_arg cat -c -do "do {./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl}"
+# Reading pref.tcl
+# 
+# 2019.2
+# 
+# vsim -t ps -coverage -onfinish stop -wlf ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/vsim.wlf -l ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/sim.log -L ./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work sc_main_opt -sc_arg "cat" -c -do "do {./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 17:20:01 on Nov 20,2024
+# //  ModelSim SE-64 2019.2 Apr 16 2019 Linux 3.10.0-862.11.6.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading /home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# Loading /home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/work.sc_main
+# Loading work.ccs_wrapper(fast)
+# Loading work.conv_layer_sysc_catapult(fast)
+# Loading work.BLOCK_1R1W_RBW(fast)
+# Loading work.BLOCK_1R1W_RBW(fast__1)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_in_wait_v1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_Pop_mioi_conf_info_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_out_wait_v1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan1_Push_mioi_conf_info_chan1_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan2b_Push_mioi_conf_info_chan2b_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_conf_info_chan3b_Push_mioi_conf_info_chan3b_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__1)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync01_Push_mioi_sync01_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync02b_Push_mioi_sync02b_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_sync03b_Push_mioi_sync03b_Push_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_staller(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_config_config_config_fsm(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_108_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_109_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_110_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_111_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_Xilinx_RAMS_BLOCK_1R1W_RBW_wport_112_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_in_wait_v1(fast__1)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync01_Pop_mioi_sync01_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_conf_info_chan1_Pop_mioi_conf_info_chan1_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__2)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_ctrl_Push_mioi_dma_read_ctrl_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_in_wait_v1(fast__2)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_dma_read_chnl_Pop_mioi_dma_read_chnl_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out(fast)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_out_core(fast)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1(fast)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_sync12b_sync_out_mioi_sync12b_sync_out_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_staller(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_load_input_load_input_load_input_fsm(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_113_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_114_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_115_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_116_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_117_11_32_2000_1_2000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_118_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_Xilinx_RAMS_BLOCK_1R1W_RBW_rwport_119_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync02b_Pop_mioi_sync02b_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_conf_info_chan2b_Pop_mioi_conf_info_chan2b_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in(fast)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32Connections_conn_sync_chan_sync_in_core(fast)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_in_v1(fast__1)
+# Loading work.esp_acc_conv_layer_dma32esp_acc_conv_layer_dma32ccs_sync_out_vld_v1(fast__1)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync12b_sync_in_mioi_sync12b_sync_in_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_sync2b3b_sync_out_mioi_sync2b3b_sync_out_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_ping_a_d_data_rsci_1_input_ping_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_pong_a_d_data_rsci_1_input_pong_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_ping_a_d_data_rsci_1_input_w_ping_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_input_w_pong_a_d_data_rsci_1_input_w_pong_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_b_a_d_data_rsci_1_output_b_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_staller(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_compute_kernel_compute_kernel_compute_kernel_fsm(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_120_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_Xilinx_RAMS_BLOCK_1R1W_RBW_rport_121_12_32_4000_1_4000_32_1_gen(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync03b_Pop_mioi_sync03b_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_conf_info_chan3b_Pop_mioi_conf_info_chan3b_Pop_mio_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_sync2b3b_sync_in_mioi_sync2b3b_sync_in_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_ctrl_Push_mioi_dma_write_ctrl_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi(fast)
+# Loading work.esp_acc_conv_layer_dma32ccs_out_wait_v1(fast__3)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_dma_write_chnl_Push_mioi_dma_write_chnl_Push_mio_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_ping_a_d_data_rsci_1_output_ping_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_ctrl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_output_pong_a_d_data_rsci_1_output_pong_a_d_data_rsc_wait_dp(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_staller(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sysc_catapult_store_output_store_output_store_output_fsm(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sCckVHdata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sEHatpdata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sNfewidata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sVGgQTdata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sBGfUJdata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sBessydata_rsc_bctl(fast)
+# Loading work.esp_acc_conv_layer_dma32conv_layer_sJFQKKdata_rsc_bctl(fast)
+# do {./conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/scverify_msim_wave.tcl}
+# Coverage database saved to './conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/concat_sim_conv_layer_sysc_catapult_v_msim/conv_layer_sysc_catapult.ucdb' on exit.
+# Reading SCVerify waveform database './conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1/scverify/ccs_wave_signals.dat'
+# Logging WAVE signals...
+# DONE
+# 0
+# Full simulation run
+# run -all
+# Info: driver: === TEST BEGIN ===
+# 
+# Connections Clock: sc_main/system_inst/clk Period: 10 ns
+# 50 ns sc_main/system_inst Configuration
+# l0: in - input 34 34 3
+# l1: c1.1 - convolution 34 34 3 32 0 1
+# l2: c1.2 - convolution 34 34 3 32 1 1 mpool 2x2
+# l3: c2.1 - convolution 18 18 3 64 1 1 mpool 2x2
+# l4: c3.1 - convolution 10 10 3 128 1 0 mpool 2x2
+# l5: fc1 - fully_connected 64 1
+# l6: fc2 - fully_connected 10 0
+# 
+# 50 ns sc_main/system_inst DWARF7 model loaded
+# 50 ns sc_main/system_inst DWARF7 image: cat.bin
+# 60 ns sc_main/system_inst Software inference completed
+# 60 ns sc_main/system_inst Testing target layer 1
+# 60 ns sc_main/system_inst config_param 
+# 60 ns sc_main/system_inst Load memory completed1
+# 70 ns sc_main/system_inst/driver sysref loadmem done
+# 70 ns sc_main/system_inst/driver info pushed 
+# 2352320 ns sc_main/system_inst Dump memory completed
+# 2352320 ns sc_main/system_inst Inference completed
+# 2352320 ns sc_main/system_inst #1: ship 0.544837
+# 2352320 ns sc_main/system_inst #2: cat 0.362477
+# 2352320 ns sc_main/system_inst ------------------------------------
+# 2352320 ns sc_main/system_inst   Validation failed!  
+# 2352320 ns sc_main/system_inst ------------------------------------
+# 2352320 ns sc_main/system_inst/driver 
+# === TEST COMPLETED === 
+# 
+# Info: (vsim-6574) SystemC simulation stopped by user.
+# Saving coverage database on exit...
+# End time: 17:20:10 on Nov 20,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# ============================================
+# Generating code coverage reports
+# Model Technology ModelSim SE-64 vcover 2019.2 Coverage Utility 2019.04 Apr 16 2019
+# Start time: 17:20:10 on Nov 20,2024
+# vcover report -html -detail -codeAll -annotate -assert -directive -cvg -verbose -threshL 50 -threshH 90 -output scverify/concat_sim_conv_layer_sysc_catapult_v_msim/covhtmlreport scverify/concat_sim_conv_layer_sysc_catapult_v_msim/conv_layer_sysc_catapult.ucdb -suppress 19039 
+# End time: 17:20:11 on Nov 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 1
+# Model Technology ModelSim SE-64 vcover 2019.2 Coverage Utility 2019.04 Apr 16 2019
+# Start time: 17:20:11 on Nov 20,2024
+# vcover report -srcfile=* -detail -codeAll -annotate -assert -directive -cvg -verbose -output scverify/concat_sim_conv_layer_sysc_catapult_v_msim/detailed_cov.txt scverify/concat_sim_conv_layer_sysc_catapult_v_msim/conv_layer_sysc_catapult.ucdb 
+# End time: 17:20:11 on Nov 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcover 2019.2 Coverage Utility 2019.04 Apr 16 2019
+# Start time: 17:20:11 on Nov 20,2024
+# vcover report -srcfile=* -output scverify/concat_sim_conv_layer_sysc_catapult_v_msim/summary_cov.txt scverify/concat_sim_conv_layer_sysc_catapult_v_msim/conv_layer_sysc_catapult.ucdb 
+# End time: 17:20:11 on Nov 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# make[2]: Leaving directory `/home/soc2024/hc3558/prj-jz3858/conv_layer_sysc_catapult/hls/syn/conv_layer_SMALL_sysc_catapult_dma32/conv_layer_sysc_catapult.v1'
+# > end dofile ./rtl_sim.tcl
