@@ -121,9 +121,9 @@ const unsigned int inbks = 1;
 const unsigned int inwbks = 1;
 const unsigned int bbks = 1;
 const unsigned int outbks = 1;
-const unsigned int inebks = 2000;
-const unsigned int inwebks = 2000;
-const unsigned int bebks = 2000;
-const unsigned int outebks = 2000;
+const unsigned int inebks = 1000;
+const unsigned int inwebks = 1000;
+const unsigned int bebks = 1000;
+const unsigned int outebks = 1000;
 
 #endif
